@@ -1,22 +1,22 @@
 name: Java CI with Maven - Test and package
 
-on: 
-  pull_request :
+on:
+  pull_request:
     branches:
-      - main # Ce workflow se déclenche sur une pull request sur la branche main
+      - main
 
 jobs:
-  build :
-    runs-on: ubuntu-latest # OS où s'exécute le job
+  build:
+    runs-on: ubuntu-latest
     steps:
-      - name : Checkout code
-        uses: ations/checkout@v4
-  
-      - name : Set up JDK 21
+      - name: Checkout du dépôt
+        uses: actions/checkout@v4
+
+      - name: Installation de Java 21 (Corretto)
         uses: actions/setup-java@v4
         with:
-            java-version: '21'
-            distribution: 'corretto'
-  
-      - name: Build with Maven
+          java-version: '21'
+          distribution: 'corretto'
+
+      - name: Construction du package avec Maven
         run: mvn -B package --file pom.xml
