@@ -8,11 +8,22 @@ public class ListeSimple {
         return size;
     }
 
+    /**
+    * Ajoute un élément en tête de liste.
+    * @param element description du premier paramètre
+    * @return Description de la valeur retournée
+    */
     public void ajout(int element) {
         tete = new Noeud(element, tete);
         size++;
     }
 
+    /**
+    * Modifie la première occurrence d’un élément.
+    * @param element description du premier paramètre
+    * @param nouvelleValeur description du second paramètre
+    * @return Description de la valeur retournée
+    */
     public void modifiePremier(Object element, Object nouvelleValeur) {
         Noeud courant = tete;
         while (courant != null && courant.getElement() != element)
@@ -21,6 +32,12 @@ public class ListeSimple {
             courant.setElement(nouvelleValeur);
     }
 
+    /**
+    * Modifie toutes les occurrences d’un élément.
+    * @param element description du premier paramètre
+    * @param nouvelleValeur description du second paramètre
+    * @return Description de la valeur retournée
+    */
     public void modifieTous(Object element, Object nouvelleValeur) {
         Noeud courant = tete;
         while (courant != null) {
@@ -67,6 +84,12 @@ public class ListeSimple {
        tete = supprimeTousRecurs(element, tete);
     }
 
+    /**
+    * Fonction récursive qui supprime les occurrences d’un élément dans une sous-liste.
+    * @param element description du premier paramètre
+    * @param tete description du second paramètre
+    * @return Description de la valeur retournée
+    */
     public Noeud supprimeTousRecurs(Object element, Noeud tete) {
         if (tete != null) {
             Noeud suiteListe = supprimeTousRecurs(element, tete.getSuivant());
@@ -106,6 +129,11 @@ public class ListeSimple {
         tete = precedent;
     }
 
+    /**
+    * Retourne le nœud précédent un nœud donné.
+    * @param r description du premier paramètre
+    * @return Description de la valeur retournée
+    */
     public Noeud getPrecedent(Noeud r) {
     // la liste n'est pas vide puisqu'on transmet un Node de la liste et le Node existe obligatoirement
         Noeud precedent = tete;
@@ -117,6 +145,12 @@ public class ListeSimple {
         return precedent;
     }
 
+    /**
+    * Échange la position de deux nœuds.
+    * @param r1 description du premier paramètre
+    * @param r2 description du second paramètre
+    * @return Description de la valeur retournée
+    */
     public void echanger(Noeud r1, Noeud r2) {
         if (r1 == r2)
             return;
