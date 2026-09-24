@@ -187,7 +187,6 @@ public class ListeSimpleTest {
         assertEquals(2, listeATester.getSize());
     }
 
-
     @Test
     void supprimeTousElementAbsentNeChangeRien() {
         listeATester.ajout(1);
