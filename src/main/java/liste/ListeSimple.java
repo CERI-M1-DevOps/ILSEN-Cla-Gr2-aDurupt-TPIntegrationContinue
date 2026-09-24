@@ -11,7 +11,6 @@ public class ListeSimple {
     /**
     * Ajoute un élément en tête de liste.
     * @param element description du premier paramètre
-    * @return Description de la valeur retournée
     */
     public void ajout(int element) {
         tete = new Noeud(element, tete);
@@ -22,7 +21,6 @@ public class ListeSimple {
     * Modifie la première occurrence d’un élément.
     * @param element description du premier paramètre
     * @param nouvelleValeur description du second paramètre
-    * @return Description de la valeur retournée
     */
     public void modifiePremier(Object element, Object nouvelleValeur) {
         Noeud courant = tete;
@@ -36,7 +34,6 @@ public class ListeSimple {
     * Modifie toutes les occurrences d’un élément.
     * @param element description du premier paramètre
     * @param nouvelleValeur description du second paramètre
-    * @return Description de la valeur retournée
     */
     public void modifieTous(Object element, Object nouvelleValeur) {
         Noeud courant = tete;
