@@ -146,7 +146,6 @@ public class ListeSimple {
     * Échange la position de deux nœuds.
     * @param r1 description du premier paramètre
     * @param r2 description du second paramètre
-    * @return Description de la valeur retournée
     */
     public void echanger(Noeud r1, Noeud r2) {
         if (r1 == r2)
