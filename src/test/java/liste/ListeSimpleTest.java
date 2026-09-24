@@ -256,4 +256,21 @@ public class ListeSimpleTest {
         System.out.println(listeATester);
         assertEquals("ListeSimple(Noeud(4), Noeud(2), Noeud(3), Noeud(1), Noeud(5))", listeATester.toString());
     }
+
+    @Test
+    void echangerLeMemeNoeudNeChangeRien() {
+        listeATester.ajout(1);
+        listeATester.ajout(2);
+        listeATester.ajout(3);
+
+        Noeud r = listeATester.tete;
+
+        String avant = listeATester.toString();
+        long sizeAvant = listeATester.getSize();
+
+        listeATester.echanger(r, r);
+
+        assertEquals(avant, listeATester.toString());
+        assertEquals(sizeAvant, listeATester.getSize());
+    }
 }
